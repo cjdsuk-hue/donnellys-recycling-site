@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://donnellysrecycling.co.uk/sitemap.xml
