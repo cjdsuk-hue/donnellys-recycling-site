@@ -57,27 +57,7 @@
 
     /* CTA */
     .cta-row{margin:16px 0 26px; display:flex; align-items:center; gap:14px; flex-wrap:wrap;}
-    
-/* === Responsive CTA buttons (prevents cut-off on mobile) === */
-@media (max-width: 700px){
-  .cta-row{
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center !important;
-    gap: 12px;
-  }
-  .cta-row .btn{
-    width: 100%;
-    max-width: 520px;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    white-space: normal; /* allow wrapping if needed */
-    text-align: center;
-    box-sizing: border-box;
-  }
-}
-.btn{display:inline-flex; align-items:center; gap:10px; padding:14px 18px; border-radius:999px; border:0; cursor:pointer; font-weight:900; font-size:16px; box-shadow: var(--shadow); user-select:none; transition: transform .08s ease; white-space:nowrap;}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:14px 18px; border-radius:999px; border:0; cursor:pointer; font-weight:900; font-size:16px; box-shadow: var(--shadow); user-select:none; transition: transform .08s ease; white-space:nowrap;}
     .btn:active{transform: translateY(1px)}
     .btn.primary{background:var(--green-900); color:#fff;}
     .btn.secondary{background:var(--green-800); color:#fff; position:relative;}
@@ -220,6 +200,7 @@ footer p, footer div, footer span, footer small {
 .faq-accordion p{margin:10px 0 0; line-height:1.55;}
 
 
+/* === Mobile centering fix for 'Call for Immediate Availability' button === */
 @media (max-width: 600px){
   a.btn.primary{
     display: block !important;
@@ -428,8 +409,8 @@ a.immediate-call{
     </p>
 
     <div class="cta-row" style="justify-content:center;">
-      <a class="btn primary" href="tel:07789093755">📞 Call to Arrange Collection</a>
-      <a class="btn ghost" href="#contact">Book Free Collection</a>
+      <a class="btn primary" href="tel:07789093755">📞 Call for Immediate Availability</a>
+      <a class="btn ghost" href="#contact">Get Free Quote</a>
     </div>
   </div>
 
@@ -513,6 +494,11 @@ a.immediate-call{
         <p>We collect common ferrous and non‑ferrous scrap including appliances, radiators, cookers, washers/dryers, and metals such as copper, brass and aluminium. If you’re unsure, message us a photo.</p>
       </details>
     </div>
+</section>
+
+  <section class="section white" aria-label="Related services">
+    <h2>Need a full property cleared?</h2>
+    <p>If you also need furniture, rubbish or a complete clear-out, see our <a href="house-clearance-nottingham-final.html">House Clearance Nottingham</a> service.</p>
   </section>
 
   <footer>
