@@ -227,64 +227,34 @@ footer p, footer div, footer small {
 }
 
 
-/* === FINAL MOBILE SWIPE FIX === */
+/* === CLEAN RESET: Professional Mobile Buttons === */
 @media (max-width: 768px) {
   .cta-row {
     display: flex !important;
-    flex-wrap: nowrap !important;
-    justify-content: flex-start !important; 
-    gap: 12px !important;
-    
-    /* Enables the horizontal swipe */
-    overflow-x: auto !important;
+    flex-direction: row !important; /* Side-by-side */
+    flex-wrap: nowrap !important; /* No stacking */
+    justify-content: center !important; /* Center them on screen */
+    gap: 10px !important;
+    padding: 15px 10px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    overflow-x: auto !important; /* Allows swipe if the screen is tiny */
     -webkit-overflow-scrolling: touch !important;
-    
-    /* Pulls buttons to the edge of the screen */
-    margin-left: -20px !important; 
-    margin-right: -20px !important;
-    padding: 10px 20px !important;
-    
-    scrollbar-width: none; /* Hides scrollbar */
-  }
-
-  .cta-row::-webkit-scrollbar { 
-    display: none; 
   }
 
   .cta-row .btn {
-    flex: 0 0 auto !important; /* PREVENTS THE MISSHAPED LOOK */
+    flex: 1 1 auto !important; /* This makes them equal size */
+    min-width: 140px !important; 
+    max-width: 180px !important;
+    height: 48px !important; /* Standard thumb-friendly height */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
     white-space: nowrap !important;
-    font-size: 16px !important;
-    padding: 12px 20px !important;
-  }
-}
-      
-/* === FINAL horizontal fix for Call button === */
-a.immediate-call{
-  display:flex !important;
-  flex-direction: row !important;  /* FORCE horizontal */
-  align-items:center !important;
-  justify-content:center !important;
-  gap:14px !important;
-
-  white-space: nowrap !important;  /* STOP wrapping to 2 lines */
-  padding:18px 36px !important;
-  box-sizing:border-box !important;
-}
-
-
-
-/* === Fit call button text INSIDE pill on small screens (no overflow) === */
-@media (max-width: 600px){
-  a.immediate-call{
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 16px 20px !important;              /* reduce side padding */
-    font-size: clamp(16px, 4.4vw, 20px) !important; /* responsive text size */
-    letter-spacing: 0 !important;
-  }
-  a.immediate-call .btn-label{
-    font-size: inherit !important;
+    border-radius: 8px !important;
+    margin: 0 !important;
   }
 }
 
@@ -380,8 +350,8 @@ footer{padding-bottom:28px;}
 <h1>Free Scrap Metal Collection Nottingham</h1>
 <p>Scrap metal can be removed as part of a <a href="house-clearance-nottingham.html" style="text-decoration:underline; color:var(--green-700); font-weight:bold;">house/waste clearance</a>. For free scrap-only collections, we cover <a href="/" style="text-decoration:underline; color:var(--green-700); font-weight:bold;">Nottingham</a> (any size) and <a href="house-clearance-derby.html" style="text-decoration:underline; color:var(--green-700); font-weight:bold;">Derby</a> (large loads).</p>
 <div class="cta-row">
-<a class="btn primary" href="tel:07789093755">📞 Call Now</a>
-<a class="btn ghost" href="https://wa.me/447789093755">💬 WhatsApp Me</a>
+  <a class="btn primary" href="tel:07789093755">📞 Call Now</a>
+  <a class="btn ghost" href="https://wa.me/447789093755">💬 WhatsApp</a>
 </div>
 </div>
 <div aria-label="Highlights" class="tiles">
