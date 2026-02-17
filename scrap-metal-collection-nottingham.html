@@ -228,30 +228,31 @@ footer p, footer div, footer small {
 
 
 /* === Fix ONLY the 'Call for Immediate Availability' button === */
-@media (max-width: 768px){
-  a.immediate-call{
-    display:flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-    gap:12px !important;
-
-    /* keep content comfortably inside the green pill */
-    padding: 18px 34px !important;
-    box-sizing: border-box !important;
-
-    text-align:center !important;
-    white-space: normal !important;
+/* === MOBILE SWIPE FIX: Ensures buttons don't cut off === */
+@media (max-width: 768px) {
+  .cta-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important; /* Start from left to ensure visibility */
+    gap: 12px !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 10px 18px !important; /* Matches site margins */
+    margin: 0 -18px !important; /* Pulls container to screen edge for better swipe */
+    scrollbar-width: none;
   }
-  a.immediate-call .btn-icon{
-    flex:0 0 auto !important;
-    line-height:1 !important;
+
+  .cta-row::-webkit-scrollbar { 
+    display: none; 
   }
-  a.immediate-call .btn-label{
-    display:inline-block !important;
-    text-align:center !important;
+
+  .cta-row > a.btn {
+    flex: 0 0 auto !important; /* Prevents buttons from shrinking */
+    white-space: nowrap !important;
+    padding: 14px 22px !important;
   }
 }
-
+      
 /* === FINAL horizontal fix for Call button === */
 a.immediate-call{
   display:flex !important;
@@ -384,8 +385,8 @@ footer{padding-bottom:28px;}
 <h1>Free Scrap Metal Collection Nottingham</h1>
 <p>Scrap metal can be removed as part of a <a href="house-clearance-nottingham.html" style="text-decoration:underline; color:var(--green-700); font-weight:bold;">house/waste clearance</a>. For free scrap-only collections, we cover <a href="/" style="text-decoration:underline; color:var(--green-700); font-weight:bold;">Nottingham</a> (any size) and <a href="house-clearance-derby.html" style="text-decoration:underline; color:var(--green-700); font-weight:bold;">Derby</a> (large loads).</p>
 <div class="cta-row" style="justify-content:center;">
-<a class="btn primary" href="tel:07789093755">📞 Call for Immediate Availability</a>
-<a class="btn ghost" href="#contact">Book Free Collection</a>
+<a class="btn primary" href="tel:07789093755">📞 Call Now</a>
+<a class="btn ghost" href="https://wa.me/447789093755">💬 WhatsApp Me</a>
 </div>
 </div>
 <div aria-label="Highlights" class="tiles">
