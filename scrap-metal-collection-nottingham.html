@@ -284,46 +284,35 @@ a.immediate-call{
 
 
 /* === FINAL FIX: Mobile top 3 CTA buttons in one row (no overlap, scrollable) === */
-@media (max-width: 768px){
-  .cta-row{
-    display:flex !important;
+/* === FINAL MOBILE SWIPE FIX === */
+@media (max-width: 768px) {
+  .cta-row {
+    display: flex !important;
     flex-wrap: nowrap !important;
-    align-items: center !important;
+    justify-content: flex-start !important; /* Forces alignment to start so swipe is obvious */
     gap: 12px !important;
-
+    
+    /* This section forces the "swipe" area to be wider than the screen */
     overflow-x: auto !important;
-    overflow-y: hidden !important;
     -webkit-overflow-scrolling: touch !important;
-
-    max-width: 100% !important;
-    padding: 6px 2px 10px !important;
-    margin: 0 auto !important;
+    
+    /* Pulls the scroll area to the absolute edges of the phone */
+    margin-left: -20px !important; 
+    margin-right: -20px !important;
+    padding: 10px 20px !important;
+    
+    scrollbar-width: none; /* Hides scrollbar on Firefox */
   }
 
-  .cta-row::-webkit-scrollbar{ display:none; }
-  .cta-row{ scrollbar-width: none; }
-
-  .cta-row > a.btn{
-    flex: 0 0 auto !important;          /* keep each button intact */
-    min-height: 58px !important;        /* same height */
-    display:flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-
-    white-space: nowrap !important;      /* stop text wrapping */
-    padding: 14px 22px !important;       /* consistent padding */
-    margin: 0 !important;
-    box-sizing: border-box !important;
-    line-height: 1 !important;
+  .cta-row::-webkit-scrollbar { 
+    display: none; /* Hides scrollbar on Chrome/Safari */
   }
 
-  /* keep icons consistent so buttons don't "jump" */
-  .cta-row > a.btn svg{
-    width: 20px !important;
-    height: 20px !important;
-    flex: 0 0 auto !important;
-    margin-right: 10px !important;
-    display:block !important;
+  .cta-row .btn {
+    flex: 0 0 auto !important; /* Stops buttons from shrinking to fit the screen */
+    white-space: nowrap !important;
+    font-size: 16px !important;
+    padding: 12px 20px !important;
   }
 }
 
@@ -384,7 +373,7 @@ footer{padding-bottom:28px;}
 <div class="hero">
 <h1>Free Scrap Metal Collection Nottingham</h1>
 <p>Scrap metal can be removed as part of a <a href="house-clearance-nottingham.html" style="text-decoration:underline; color:var(--green-700); font-weight:bold;">house/waste clearance</a>. For free scrap-only collections, we cover <a href="/" style="text-decoration:underline; color:var(--green-700); font-weight:bold;">Nottingham</a> (any size) and <a href="house-clearance-derby.html" style="text-decoration:underline; color:var(--green-700); font-weight:bold;">Derby</a> (large loads).</p>
-<div class="cta-row" style="justify-content:center;">
+<div class="cta-row">
 <a class="btn primary" href="tel:07789093755">📞 Call Now</a>
 <a class="btn ghost" href="https://wa.me/447789093755">💬 WhatsApp Me</a>
 </div>
