@@ -227,68 +227,102 @@ footer p, footer div, footer small {
 }
 
 
-/* === CLEAN RESET: Professional Mobile Buttons === */
-@media (max-width: 768px) {
-  .cta-row {
-    display: flex !important;
-    flex-direction: row !important; /* Side-by-side */
-    flex-wrap: nowrap !important; /* No stacking */
-    justify-content: center !important; /* Center them on screen */
-    gap: 10px !important;
-    padding: 15px 10px !important;
-    width: 100% !important;
-    margin: 0 !important;
-    overflow-x: auto !important; /* Allows swipe if the screen is tiny */
-    -webkit-overflow-scrolling: touch !important;
-  }
+/* === Fix ONLY the 'Call for Immediate Availability' button === */
+@media (max-width: 768px){
+  a.immediate-call{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:12px !important;
 
-  .cta-row .btn {
-    flex: 1 1 auto !important; /* This makes them equal size */
-    min-width: 140px !important; 
-    max-width: 180px !important;
-    height: 48px !important; /* Standard thumb-friendly height */
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-size: 15px !important;
-    font-weight: bold !important;
-    white-space: nowrap !important;
-    border-radius: 8px !important;
-    margin: 0 !important;
+    /* keep content comfortably inside the green pill */
+    padding: 18px 34px !important;
+    box-sizing: border-box !important;
+
+    text-align:center !important;
+    white-space: normal !important;
+  }
+  a.immediate-call .btn-icon{
+    flex:0 0 auto !important;
+    line-height:1 !important;
+  }
+  a.immediate-call .btn-label{
+    display:inline-block !important;
+    text-align:center !important;
+  }
+}
+
+/* === FINAL horizontal fix for Call button === */
+a.immediate-call{
+  display:flex !important;
+  flex-direction: row !important;  /* FORCE horizontal */
+  align-items:center !important;
+  justify-content:center !important;
+  gap:14px !important;
+
+  white-space: nowrap !important;  /* STOP wrapping to 2 lines */
+  padding:18px 36px !important;
+  box-sizing:border-box !important;
+}
+
+
+
+/* === Fit call button text INSIDE pill on small screens (no overflow) === */
+@media (max-width: 600px){
+  a.immediate-call{
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 16px 20px !important;              /* reduce side padding */
+    font-size: clamp(16px, 4.4vw, 20px) !important; /* responsive text size */
+    letter-spacing: 0 !important;
+  }
+  a.immediate-call .btn-label{
+    font-size: inherit !important;
   }
 }
 
 
 /* === FINAL FIX: Mobile top 3 CTA buttons in one row (no overlap, scrollable) === */
-/* === FINAL MOBILE SWIPE FIX === */
-@media (max-width: 768px) {
-  .cta-row {
-    display: flex !important;
+@media (max-width: 768px){
+  .cta-row{
+    display:flex !important;
     flex-wrap: nowrap !important;
-    justify-content: flex-start !important; /* Forces alignment to start so swipe is obvious */
+    align-items: center !important;
     gap: 12px !important;
-    
-    /* This section forces the "swipe" area to be wider than the screen */
+
     overflow-x: auto !important;
+    overflow-y: hidden !important;
     -webkit-overflow-scrolling: touch !important;
-    
-    /* Pulls the scroll area to the absolute edges of the phone */
-    margin-left: -20px !important; 
-    margin-right: -20px !important;
-    padding: 10px 20px !important;
-    
-    scrollbar-width: none; /* Hides scrollbar on Firefox */
+
+    max-width: 100% !important;
+    padding: 6px 2px 10px !important;
+    margin: 0 auto !important;
   }
 
-  .cta-row::-webkit-scrollbar { 
-    display: none; /* Hides scrollbar on Chrome/Safari */
+  .cta-row::-webkit-scrollbar{ display:none; }
+  .cta-row{ scrollbar-width: none; }
+
+  .cta-row > a.btn{
+    flex: 0 0 auto !important;          /* keep each button intact */
+    min-height: 58px !important;        /* same height */
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    white-space: nowrap !important;      /* stop text wrapping */
+    padding: 14px 22px !important;       /* consistent padding */
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    line-height: 1 !important;
   }
 
-  .cta-row .btn {
-    flex: 0 0 auto !important; /* Stops buttons from shrinking to fit the screen */
-    white-space: nowrap !important;
-    font-size: 16px !important;
-    padding: 12px 20px !important;
+  /* keep icons consistent so buttons don't "jump" */
+  .cta-row > a.btn svg{
+    width: 20px !important;
+    height: 20px !important;
+    flex: 0 0 auto !important;
+    margin-right: 10px !important;
+    display:block !important;
   }
 }
 
@@ -338,20 +372,51 @@ footer{padding-bottom:28px;}
     margin-right: auto !important;
     overflow-x: hidden !important;
   }
-}</style></head>
+}
+
+/* === SCRAP PAGE HERO CTA FIX (Stops clipping & half button issue) === */
+@media (max-width: 768px){
+
+  /* Override global horizontal scroll behaviour ONLY for hero buttons */
+  .hero .cta-row{
+    display: flex !important;
+    flex-wrap: wrap !important;        /* allow stacking */
+    justify-content: center !important;
+    align-items: center !important;
+
+    overflow-x: visible !important;    /* remove sideways scroll */
+    padding: 8px 0 !important;
+    gap: 14px !important;
+  }
+
+  /* Make buttons full width but centered */
+  .hero .cta-row .btn{
+    width: 100% !important;
+    max-width: 520px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    white-space: nowrap !important;    /* keep text on one line */
+    box-sizing: border-box !important;
+  }
+
+}
+
+</style></head>
 <body>
 <a aria-label="WhatsApp Donnelly’s Recycling" class="wa" href="https://wa.me/447789093755">💬 WhatsApp</a>
 <div class="wrap">
-<div class="cta-row">
-  <a class="btn primary" href="tel:07789093755">📞 Call Now</a>
-  <a class="btn ghost" href="https://wa.me/447789093755">💬 WhatsApp Me</a>
+<div class="topbar" style="align-items:center;">
+<a aria-label="Back to home" class="btn ghost" href="index.html">← Back to Home</a>
+<a aria-label="Call now" class="btn primary" href="tel:07789093755">📞 Call 07789 093755</a>
 </div>
 <div class="hero">
 <h1>Free Scrap Metal Collection Nottingham</h1>
 <p>Scrap metal can be removed as part of a <a href="house-clearance-nottingham.html" style="text-decoration:underline; color:var(--green-700); font-weight:bold;">house/waste clearance</a>. For free scrap-only collections, we cover <a href="/" style="text-decoration:underline; color:var(--green-700); font-weight:bold;">Nottingham</a> (any size) and <a href="house-clearance-derby.html" style="text-decoration:underline; color:var(--green-700); font-weight:bold;">Derby</a> (large loads).</p>
-<div class="cta-row">
-  <a class="btn primary" href="tel:07789093755">📞 Call Now</a>
-  <a class="btn ghost" href="https://wa.me/447789093755">💬 WhatsApp</a>
+<div class="cta-row" style="justify-content:center;">
+<a class="btn primary" href="tel:07789093755">📞 Call for Immediate Availability</a>
+<a class="btn ghost" href="https://wa.me/447789093755?text=Hi%20Donnelly%E2%80%99s%20Recycling%20%E2%80%94%20I%E2%80%99d%20like%20to%20book%20a%20free%20scrap%20metal%20collection%20in%20Nottingham.%20My%20postcode%20is%3A%20____%20.%20Items%3A%20____%20.">Book Free Collection</a>
 </div>
 </div>
 <div aria-label="Highlights" class="tiles">
