@@ -227,29 +227,35 @@ footer p, footer div, footer small {
 }
 
 
-/* === Fix ONLY the 'Call for Immediate Availability' button === */
-/* === MOBILE SWIPE FIX: Ensures buttons don't cut off === */
+/* === FINAL MOBILE SWIPE FIX === */
 @media (max-width: 768px) {
   .cta-row {
     display: flex !important;
     flex-wrap: nowrap !important;
-    justify-content: flex-start !important; /* Start from left to ensure visibility */
+    justify-content: flex-start !important; 
     gap: 12px !important;
+    
+    /* Enables the horizontal swipe */
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
-    padding: 10px 18px !important; /* Matches site margins */
-    margin: 0 -18px !important; /* Pulls container to screen edge for better swipe */
-    scrollbar-width: none;
+    
+    /* Pulls buttons to the edge of the screen */
+    margin-left: -20px !important; 
+    margin-right: -20px !important;
+    padding: 10px 20px !important;
+    
+    scrollbar-width: none; /* Hides scrollbar */
   }
 
   .cta-row::-webkit-scrollbar { 
     display: none; 
   }
 
-  .cta-row > a.btn {
-    flex: 0 0 auto !important; /* Prevents buttons from shrinking */
+  .cta-row .btn {
+    flex: 0 0 auto !important; /* PREVENTS THE MISSHAPED LOOK */
     white-space: nowrap !important;
-    padding: 14px 22px !important;
+    font-size: 16px !important;
+    padding: 12px 20px !important;
   }
 }
       
@@ -366,9 +372,9 @@ footer{padding-bottom:28px;}
 <body>
 <a aria-label="WhatsApp Donnelly’s Recycling" class="wa" href="https://wa.me/447789093755">💬 WhatsApp</a>
 <div class="wrap">
-<div class="topbar" style="align-items:center;">
-<a aria-label="Back to home" class="btn ghost" href="index.html">← Back to Home</a>
-<a aria-label="Call now" class="btn primary" href="tel:07789093755">📞 Call 07789 093755</a>
+<div class="cta-row">
+  <a class="btn primary" href="tel:07789093755">📞 Call Now</a>
+  <a class="btn ghost" href="https://wa.me/447789093755">💬 WhatsApp Me</a>
 </div>
 <div class="hero">
 <h1>Free Scrap Metal Collection Nottingham</h1>
