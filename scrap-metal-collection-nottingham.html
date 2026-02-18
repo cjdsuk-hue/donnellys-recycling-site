@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Free Scrap Metal Collection Nottingham | Donnelly’s Recycling</title>
-<meta content="Completely free scrap metal collection across Nottingham on any size load. Appliances, radiators, cookers &amp; more. Derby free collection for larger quantities. Call 07789 093755." name="description"/>
+<meta content="Free scrap metal collection in Nottingham. We collect copper, brass, aluminium and more with fast pickup. Get in touch for collection." name="description"/>
 <meta content="index, follow" name="robots"/>
 <link href="logo.png" rel="icon"/>
-<link href="https://www.donnellysrecycling.co.uk/scrap-metal-collection-nottingham.html" rel="canonical"/>
+<link href="https://donnellysrecycling.co.uk/scrap-metal-collection-nottingham.html" rel="canonical"/>
 <meta content="Free Scrap Metal Collection Nottingham | Donnelly’s Recycling" property="og:title"/>
 <meta content="Completely free scrap metal collection across Nottingham on any size load. Derby: larger loads only. Call 07789 093755." property="og:description"/>
 <meta content="website" property="og:type"/>
-<meta content="https://www.donnellysrecycling.co.uk/scrap-metal-collection-nottingham.html" property="og:url"/>
-<meta content="https://www.donnellysrecycling.co.uk/logo.webp" property="og:image"/>
+<meta content="https://donnellysrecycling.co.uk/scrap-metal-collection-nottingham.html" property="og:url"/>
+<meta content="https://donnellysrecycling.co.uk/logo.webp" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Free Scrap Metal Collection Nottingham | Donnelly’s Recycling" name="twitter:title"/>
 <meta content="Completely free scrap metal collection across Nottingham on any size load. Derby: larger loads only." name="twitter:description"/>
-<meta content="https://www.donnellysrecycling.co.uk/logo.webp" name="twitter:image"/>
+<meta content="https://donnellysrecycling.co.uk/logo.webp" name="twitter:image"/>
 <style>:root{
       --green-900:#0f3b2e;
       --green-800:#154535;
@@ -346,6 +345,24 @@ a.immediate-call{
   .google-reviews-section h2{font-size: 32px;}
   .reviews-grid{grid-template-columns: 1fr;}
 }
+
+/* === FIX: Stack CTA buttons on mobile (no slider, no cut-off) === */
+@media (max-width: 600px){
+  .cta-row{
+    flex-direction: column !important;
+    align-items: stretch !important;
+    flex-wrap: wrap !important;
+    overflow-x: visible !important;
+  }
+  .cta-row .btn{
+    width: 100% !important;
+    max-width: 520px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+}
+
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Donnelly’s Recycling","url":"https://donnellysrecycling.co.uk/","telephone":"+447789093755","image":"https://donnellysrecycling.co.uk/logo.webp","areaServed":[{"@type":"City","name":"Nottingham"},{"@type":"City","name":"Derby"},{"@type":"City","name":"Sheffield"},{"@type":"City","name":"Mansfield"},{"@type":"City","name":"Newark"},{"@type":"City","name":"Loughborough"},{"@type":"City","name":"Chesterfield"}],"description":"Completely free scrap metal collection across Nottingham on any size load. Derby free collection for larger quantities.","hasMap":"https://www.google.com/maps?cid=14989160805684334058","serviceArea":[{"@type":"City","name":"Nottingham"},{"@type":"City","name":"Derby"},{"@type":"City","name":"Sheffield"},{"@type":"City","name":"Mansfield"},{"@type":"City","name":"Newark"},{"@type":"City","name":"Loughborough"},{"@type":"City","name":"Chesterfield"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do you collect scrap metal for free in Nottingham?","acceptedAnswer":{"@type":"Answer","text":"Yes — we offer completely free scrap metal collection across Nottingham on any size load, including single appliances like washing machines, cookers and radiators."}},{"@type":"Question","name":"Do you collect scrap metal for free in Derby?","acceptedAnswer":{"@type":"Answer","text":"In Derby, free scrap metal collection is available for larger quantities. Contact us with what you have and we’ll confirm."}},{"@type":"Question","name":"What scrap metal items do you collect?","acceptedAnswer":{"@type":"Answer","text":"We collect common ferrous and non‑ferrous scrap such as appliances, radiators, cookers, washers, dryers, brass, copper and aluminium. If you’re unsure, message us a photo."}}]}</script>
@@ -372,39 +389,8 @@ footer{padding-bottom:28px;}
     margin-right: auto !important;
     overflow-x: hidden !important;
   }
-}
-
-/* === SCRAP PAGE HERO CTA FIX (Stops clipping & half button issue) === */
-@media (max-width: 768px){
-
-  /* Override global horizontal scroll behaviour ONLY for hero buttons */
-  .hero .cta-row{
-    display: flex !important;
-    flex-wrap: wrap !important;        /* allow stacking */
-    justify-content: center !important;
-    align-items: center !important;
-
-    overflow-x: visible !important;    /* remove sideways scroll */
-    padding: 8px 0 !important;
-    gap: 14px !important;
-  }
-
-  /* Make buttons full width but centered */
-  .hero .cta-row .btn{
-    width: 100% !important;
-    max-width: 520px !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-
-    white-space: nowrap !important;    /* keep text on one line */
-    box-sizing: border-box !important;
-  }
-
-}
-
-</style></head>
-<body>
+}</style><link href="styles.css" rel="stylesheet"/></head>
+<body class="page-scrap">
 <a aria-label="WhatsApp Donnelly’s Recycling" class="wa" href="https://wa.me/447789093755">💬 WhatsApp</a>
 <div class="wrap">
 <div class="topbar" style="align-items:center;">
@@ -416,7 +402,7 @@ footer{padding-bottom:28px;}
 <p>Scrap metal can be removed as part of a <a href="house-clearance-nottingham.html" style="text-decoration:underline; color:var(--green-700); font-weight:bold;">house/waste clearance</a>. For free scrap-only collections, we cover <a href="/" style="text-decoration:underline; color:var(--green-700); font-weight:bold;">Nottingham</a> (any size) and <a href="house-clearance-derby.html" style="text-decoration:underline; color:var(--green-700); font-weight:bold;">Derby</a> (large loads).</p>
 <div class="cta-row" style="justify-content:center;">
 <a class="btn primary" href="tel:07789093755">📞 Call for Immediate Availability</a>
-<a class="btn ghost" href="https://wa.me/447789093755?text=Hi%20Donnelly%E2%80%99s%20Recycling%20%E2%80%94%20I%E2%80%99d%20like%20to%20book%20a%20free%20scrap%20metal%20collection%20in%20Nottingham.%20My%20postcode%20is%3A%20____%20.%20Items%3A%20____%20.">Book Free Collection</a>
+<a class="btn ghost" href="https://wa.me/447789093755?text=Hi%20I%20would%20like%20to%20book%20a%20free%20scrap%20metal%20collection">Book Free Collection</a>
 </div>
 </div>
 <div aria-label="Highlights" class="tiles">
@@ -516,5 +502,5 @@ footer{padding-bottom:28px;}
   const y = document.getElementById('y');
   if (y) y.textContent = new Date().getFullYear();
 </script>
-</body>
+<script defer="defer" src="main.js"></script></body>
 </html>
