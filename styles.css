@@ -375,3 +375,20 @@ footer{
     content: "" !important;
   }
 }
+
+/* v8 fix: scrap metal CTA buttons should stack on mobile (no horizontal slider) */
+@media (max-width: 768px){
+  .page-scrap .cta-row{
+    flex-wrap: wrap !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    padding: 0 !important;
+    margin: 16px 0 26px !important;
+  }
+  .page-scrap .cta-row > a.btn{
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+
