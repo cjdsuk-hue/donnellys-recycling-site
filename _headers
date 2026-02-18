@@ -1,0 +1,23 @@
+/*
+  # Security headers
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: same-origin
+
+/*.html
+  # Short cache for HTML so updates deploy quickly
+  Cache-Control: public, max-age=600
+
+/*.png
+  # Cache images for one year
+  Cache-Control: public, max-age=31536000
+
+/*.webp
+  # Cache webp images for one year
+  Cache-Control: public, max-age=31536000
+
+/*.css
+  Cache-Control: public, max-age=31536000
+
+/*.js
+  Cache-Control: public, max-age=31536000
