@@ -1,1 +1,21 @@
+# Force www -> non-www
 https://www.donnellysrecycling.co.uk/* https://donnellysrecycling.co.uk/:splat 301!
+
+# Force index.html -> root
+/index.html  /  301!
+
+# Force .html -> clean URLs (avoid duplicates)
+
+/house-clearance-nottingham.html          /house-clearance-nottingham          301!
+/house-clearance-nottinghamshire.html     /house-clearance-nottinghamshire     301!
+/house-clearance-mansfield.html           /house-clearance-mansfield           301!
+/house-clearance-newark.html              /house-clearance-newark              301!
+/house-clearance-derby.html               /house-clearance-derby               301!
+/house-clearance-loughborough.html        /house-clearance-loughborough        301!
+/house-clearance-sheffield.html           /house-clearance-sheffield           301!
+/house-clearance-chesterfield.html        /house-clearance-chesterfield        301!
+
+/scrap-metal-collection-nottingham.html   /scrap-metal-collection-nottingham   301!
+/waste-clearance-nottingham.html          /waste-clearance-nottingham          301!
+/garage-clearance-nottingham.html         /garage-clearance-nottingham         301!
+/loft-clearance-nottingham.html           /loft-clearance-nottingham           301!
