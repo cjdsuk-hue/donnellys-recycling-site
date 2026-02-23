@@ -43,7 +43,7 @@ export default async (req, context) => {
     }
 
     // 2) Place Details (rating, total ratings, reviews)
-    const detailUrl = 
+    const detailsUrl = 
       "https://maps.googleapis.com/maps/api/place/details/json" +
       "?cid=" + encodeURIComponent(placeId) + 
       "&fields=name,rating,user_ratings_total,reviews,url" +
