@@ -43,12 +43,11 @@ export default async (req, context) => {
     }
 
     // 2) Place Details (rating, total ratings, reviews)
-    const detailsUrl =
+    const detailUrl = 
       "https://maps.googleapis.com/maps/api/place/details/json" +
-      "?place_id=" + encodeURIComponent(placeId) +
+      "?cid=" + encodeURIComponent(placeId) + 
       "&fields=name,rating,user_ratings_total,reviews,url" +
       "&key=" + encodeURIComponent(API_KEY);
-
     const detailsRes = await fetch(detailsUrl);
     const detailsJson = await detailsRes.json();
 
