@@ -42,7 +42,7 @@ export default async (req, context) => {
       placeId = cand.place_id;
     }
 
-    // 2) Place Details (rating, total ratings, reviews)
+    // 2) Place details (rating, total ratings, reviews)
     const detailsUrl = 
       "https://maps.googleapis.com/maps/api/place/details/json" +
       "?cid=" + encodeURIComponent(placeId) + 
@@ -75,8 +75,8 @@ export default async (req, context) => {
       reviews,
       // Helpful links (CID based)
       links: {
-        read: "https://www.google.com/maps?cid=14989160805684334058",
-        write: "https://google.com/maps/place?cid=14989160805684334058&dtab=2&action=openratings&ct=write-review"
+        read: "https://www.google.com/maps?cid=12741513222851480595",
+        write: "https://google.com/maps/place?cid=12741513222851480595&dtab=2&action=openratings&ct=write-review"
       }
     }), {
       status: 200,
