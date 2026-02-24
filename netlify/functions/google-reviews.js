@@ -71,7 +71,7 @@ export default async (req, context) => {
       name: r.name || "Donnelly's Recycling",
       rating: r.rating ?? null,
       user_ratings_total: r.user_ratings_total ?? null,
-      url: r.url || null,
+      url: "https://www.google.com/maps?cid=14989160805684334058",
       reviews,
       // Helpful links (CID based)
       links: {
