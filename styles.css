@@ -392,3 +392,52 @@ footer{
   }
 }
 
+
+
+/* === FIX: stack CTA buttons vertically on mobile === */
+@media (max-width: 768px){
+  .cta-row{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    justify-content:flex-start !important;
+    gap:12px !important;
+    overflow:visible !important;
+    padding:0 !important;
+    margin:16px 0 26px !important;
+  }
+
+  .cta-row > a.btn,
+  .cta-row > .btn{
+    width:100% !important;
+    max-width:none !important;
+    flex:0 0 auto !important;
+    min-width:0 !important;
+    justify-content:center !important;
+    text-align:center !important;
+    white-space:normal !important;
+    margin:0 !important;
+  }
+}
+
+/* === FIX: align 'What We Collect' text neatly on desktop === */
+@media (min-width: 769px){
+  .page-scrap .checks{
+    display:grid !important;
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+    column-gap:28px !important;
+    row-gap:12px !important;
+    align-items:start !important;
+  }
+
+  .page-scrap .checks li{
+    align-items:flex-start !important;
+    justify-content:flex-start !important;
+    text-align:left !important;
+  }
+
+  .page-scrap .checks .dot{
+    flex:0 0 20px !important;
+    margin-top:2px !important;
+  }
+}
