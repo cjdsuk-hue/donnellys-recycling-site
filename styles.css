@@ -441,3 +441,44 @@ footer{
     margin-top:2px !important;
   }
 }
+/* Fix Why Choose bullet alignment */
+.why-list{
+padding-left:0 !important;
+margin-left:0 !important;
+max-width:650px;
+margin-right:auto;
+margin-left:auto;
+}
+
+.why-list li{
+text-align:left;
+}
+/* Fix What We Collect alignment */
+.checks{
+justify-content:flex-start !important;
+}
+
+.checks li{
+text-align:left;
+}
+/* Fix ONLY the Why Choose bullet alignment */
+section[aria-label="Why choose us"] .why-list{
+  padding-left:0 !important;
+  margin:10px auto !important;
+  max-width:650px;
+  list-style-position:inside;
+}
+
+section[aria-label="Why choose us"] .why-list li{
+  text-align:left;
+}
+/* Why Choose heading: left on desktop, centered on mobile */
+.why-heading{
+  text-align:left;
+}
+
+@media (max-width: 768px){
+  .why-heading{
+    text-align:center;
+  }
+}
