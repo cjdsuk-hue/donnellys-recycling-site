@@ -2,8 +2,18 @@
 <ns0:urlset xmlns:ns0="http://www.sitemaps.org/schemas/sitemap/0.9">
   <ns0:url>
     <ns0:loc>https://donnellysrecycling.co.uk/</ns0:loc>
-    <ns0:lastmod>2026-02-13</ns0:lastmod>
+    <ns0:lastmod>2026-05-04</ns0:lastmod>
     <ns0:priority>1.0</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://donnellysrecycling.co.uk/blog</ns0:loc>
+    <ns0:lastmod>2026-05-04</ns0:lastmod>
+    <ns0:priority>0.8</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://donnellysrecycling.co.uk/garage-clearance-selston</ns0:loc>
+    <ns0:lastmod>2026-05-04</ns0:lastmod>
+    <ns0:priority>0.8</ns0:priority>
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://donnellysrecycling.co.uk/house-clearance-nottingham</ns0:loc>
@@ -65,4 +75,4 @@
     <ns0:lastmod>2026-02-13</ns0:lastmod>
     <ns0:priority>0.7</ns0:priority>
   </ns0:url>
-  </ns0:urlset>
+</ns0:urlset>
