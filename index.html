@@ -420,16 +420,20 @@
       // Inject JSON-LD rating schema dynamically (best-effort)
       // Note: Google may or may not process JS-injected schema, but this keeps values accurate.
       const rating = data.rating;
-      const count = data.user_ratings_total;
-      // Schema injection removed to avoid duplicate LocalBusiness JSON-LD.
-})
+const count = data.user_ratings_total;
+// Schema injection removed to avoid duplicate LocalBusiness JSON-LD.
+    })
     .catch(()=>{});
 
-  function escapeHtml(str){
-    return String(str).replace(/[&<>"']/g, (m) => ({
-      "&":"&","<":"<",">":">",'"':""","'":"'"
-    }[m]));
-  }
+function escapeHtml(str){
+  return String(str).replace(/[&<>"']/g, (m) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  }[m]));
+}
 })();
 </script>
 </body>
